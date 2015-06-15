@@ -1,0 +1,11 @@
+LINT_OPTIONS = --filter=-legal/copyright,-whitespace/line_length,-readability/namespace,-readability/todo,-runtime,-build/include_what_you_use
+
+check::
+	@./cpplint.py $(LINT_OPTIONS) *.cc *.h
+
+test:: $(DLLIB)
+	@ruby test.rb
+
+DEPS = $(OBJS:.o=.d)
+
+-include $(DEPS)

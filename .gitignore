@@ -1,0 +1,10 @@
+*.swp
+*~
+*.o
+*.d
+Makefile
+chaml_engine.so
+chaml-*.gem
+GemFile.lock
+Gemfile.lock
+.RUBYARCHDIR.time
